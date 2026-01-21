@@ -1,5 +1,5 @@
 # =====================
-# Django Backend (ignore)
+# Django backend (ignore)
 # =====================
 attendance/
 core/
@@ -11,6 +11,7 @@ accounts/*
 !accounts/templates/
 !accounts/templates/accounts/
 !accounts/templates/accounts/frontend/
+!accounts/templates/accounts/frontend/**
 
 # =====================
 # Python
