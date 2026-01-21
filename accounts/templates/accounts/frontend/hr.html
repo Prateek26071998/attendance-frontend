@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+        .dashboard-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid">
+        <span class="navbar-brand fw-bold">🧑‍💼 HR Dashboard</span>
+
+        <div class="d-flex">
+            <span class="navbar-text me-3">
+                {{ request.user.email }}
+            </span>
+            <a href="/logout/" class="btn btn-outline-light btn-sm">
+                Logout
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container mt-5">
+
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2 class="fw-bold">Welcome, HR 👋</h2>
+            <p class="text-muted">Manage attendance & reports</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- MARK ATTENDANCE -->
+        <div class="col-md-6">
+            <div class="card dashboard-card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-check2-square display-4 text-success"></i>
+                    <h5 class="mt-3 fw-bold">Mark Attendance</h5>
+                    <p class="text-muted">
+                        Mark daily attendance for employees.
+                    </p>
+                    <a href="/hr/attendance/" class="btn btn-success">
+                        Go
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW REPORT -->
+        <div class="col-md-6">
+            <div class="card dashboard-card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-bar-chart-fill display-4 text-primary"></i>
+                    <h5 class="mt-3 fw-bold">Attendance Reports</h5>
+                    <p class="text-muted">
+                        View and analyze employee attendance records.
+                    </p>
+                    <a href="/hr/attendance/report/" class="btn btn-primary">
+                        View Report
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
