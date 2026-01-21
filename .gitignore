@@ -1,0 +1,26 @@
+# =====================
+# Django Backend (ignore)
+# =====================
+attendance/
+core/
+manage.py
+db.sqlite3
+
+# Ignore accounts backend BUT allow frontend
+accounts/*
+!accounts/templates/
+!accounts/templates/accounts/
+!accounts/templates/accounts/frontend/
+
+# =====================
+# Python
+# =====================
+venv/
+__pycache__/
+*.pyc
+
+# =====================
+# OS / Editor
+# =====================
+.vscode/
+.DS_Store
